@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var ip = req.ips;
+  var ip = req.ip;
   var language = req.acceptsLanguages()[0];
   var ua = parser(req.headers['user-agent']);
   var user = ua.os.name + ' ' + ua.os.version;
